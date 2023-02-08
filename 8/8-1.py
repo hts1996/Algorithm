@@ -1,10 +1,17 @@
 num=int(input())
 num_list=list(map(int,input().split()))
-for i in num:
+m=num
+for i in num_list:
+    n=0
     if i == 1:
-        num_list.remove(i)
+        m-=1
     else:
-        for j in range(len(num_list)):
-            if num_list[j]%i == 0:
-                num_list.remove(i)
-print(num_list)
+        for j in range(2, i+1):
+            if i % j == 0 and j != i:
+                n+=1
+            else:
+                pass
+            i
+        if n>0:
+            m-=1
+print(m)
